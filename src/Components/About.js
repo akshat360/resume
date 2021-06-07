@@ -16,6 +16,7 @@ class About extends Component {
     const email = this.props.data.email;
     const resumeDownload = this.props.data.resumedownload;
 
+    const { country } = this.props.data.address;
     return (
       <section id="about">
         <Fade duration={1000}>
@@ -35,15 +36,31 @@ class About extends Component {
                 <div className="columns contact-details">
                   <h2>Contact Details</h2>
                   <p className="address">
-                    <span>{name}</span>
-                    <br />
                     <span>
-                      {city} {state}, {zip}
+                      <i className="fa fa-user" />
+                      &nbsp;&nbsp;
+                      {name}
                     </span>
                     <br />
-                    <span>{phone}</span>
+                    <span>
+                      🇮🇳&nbsp;
+                      {city}, {state}, {country}
+                    </span>
                     <br />
-                    <span>{email}</span>
+                    <span>
+                      <a href={`tel:${phone}`}>
+                        <i className="fa fa-phone" />
+                        &nbsp;&nbsp;{phone}
+                      </a>
+                    </span>
+                    <br />
+
+                    <span>
+                      <a href={`mailto:${email}`}>
+                        <i className="fa fa-envelope" />
+                        &nbsp;&nbsp;{email}
+                      </a>
+                    </span>
                   </p>
                 </div>
                 <div className="columns download">

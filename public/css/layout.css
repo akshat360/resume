@@ -88,6 +88,13 @@ header .social {
   padding: 0;
   font-size: 30px;
 }
+header .social .header-links {
+  margin: 0px 10px;
+}
+header .social .header-links i {
+  font-size: 30px;
+  color: #323232;
+}
 header .social li {
   display: inline-block;
   margin: 0 15px;
@@ -327,36 +334,46 @@ ul#nav li.current a {
 .bars .skills {
   margin-top: 36px;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
-.bars li {
-  position: relative;
-  margin-bottom: 60px;
-  background: #333;
-  height: 42px;
-  border-radius: 0px;
+.bars .skills .skill {
+  width: 33%;
+  padding: 0.5rem 2rem;
+  text-align: center;
 }
-.bars li em {
+
+.bars em {
   font: 15px 'opensans-bold', sans-serif;
   color: #313131;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: normal;
   position: relative;
-  top: -36px;
+  text-align: center;
+  /* top: -36px; */
+}
+.bar-expand-wrapper {
+  background: #ececec;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 .bar-expand {
-  position: absolute;
+  /* position: absolute;
   left: 0;
   top: 0;
 
   margin: 0;
   padding-right: 24px;
-  background: #313131;
   display: inline-block;
-  height: 42px;
   line-height: 42px;
-  border-radius: 0px;
+  border-radius: 0px; */
+  border-radius: 25px;
+  height: 20px;
+  display: flex;
 }
+
 /*
 .git {
   	-moz-animation: git 2s ease;

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import Slide from "react-reveal";
+import React, { Component } from 'react';
+import Slide from 'react-reveal';
 
 class Resume extends Component {
   getRandomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
+    let letters = '0123456789ABCDEF';
+    let color = '#';
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
@@ -38,19 +38,6 @@ class Resume extends Component {
           </p>
           <p>{work.description}</p>
         </div>
-      );
-    });
-
-    const skills = this.props.data.skills.map((skills) => {
-      const backgroundColor = this.getRandomColor();
-      const className = "bar-expand " + skills.name.toLowerCase();
-      const width = skills.level;
-
-      return (
-        <li key={skills.name}>
-          <span style={{ width, backgroundColor }} className={className}></span>
-          <em>{skills.name}</em>
-        </li>
       );
     });
 
@@ -94,9 +81,27 @@ class Resume extends Component {
 
             <div className="nine columns main-col">
               <p>{skillmessage}</p>
+            </div>
+            <div className="bars ">
+              <div className="skills ">
+                {this.props.data.skills.map((skills, i, self) => {
+                  const backgroundColor = this.getRandomColor();
+                  const width = skills.level;
 
-              <div className="bars">
-                <ul className="skills">{skills}</ul>
+                  return (
+                    <div key={skills.name} className="skill">
+                      <em>{skills.name}</em>
+                      <div className="bar-expand-wrapper">
+                        <Slide cascade left>
+                          <div
+                            className="bar-expand"
+                            style={{ width, backgroundColor }}
+                          ></div>
+                        </Slide>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

@@ -18,9 +18,30 @@ const data = {
       city: 'Delhi',
       state: 'Delhi',
       zip: '110053',
+      country: 'India',
     },
     website: 'https://github.com/akshat360',
     resumedownload: 'http://timbakerdev.com',
+    headerLinks: [
+      {
+        name: 'LinkedIn',
+        icon: 'fa fa-linkedin',
+        url: 'https://www.linkedin.com/in/akshat360/',
+        className: 'icon-facebook',
+      },
+      {
+        name: 'Github',
+        icon: 'fa fa-github',
+        url: 'https://github.com/akshat360',
+        className: 'icon-github',
+      },
+      {
+        name: 'Instagram',
+        icon: 'fa fa-instagram',
+        url: 'https://www.instagram.com/akshattaggarwal/',
+        className: 'icon-instagram',
+      },
+    ],
     social: [
       //   {
       //     name: 'facebook',
@@ -54,64 +75,93 @@ const data = {
       'Here you can create a short write-up of your skills to show off to employers',
     education: [
       {
-        school: 'University?',
-        degree: 'Masters in Beer tasting',
-        graduated: 'April 2017',
-        description:
-          'Describe your experience at school, what you learned, what useful skills you have acquired etc.',
+        school: 'Maharaja Surajmal Institute Of Technology',
+        degree: 'B.Tech in Information Technology',
+        graduated: '2018 - 2022',
+        // marks: '90.4 %',
+
+        //     description:
+        //       'Describe your experience at school, what you learned, what useful skills you have acquired etc.',
       },
       {
-        school: 'School #1 Maybe College?',
-        degree: 'What did you study 101',
-        graduated: 'March 2013',
-        description:
-          'Describe your experience at school, what you learned, what useful skills you have acquired etc.',
+        school: 'Bhai Parmanand Vidya Mandir',
+        degree: 'Senior Secondary School',
+        graduated: '2016 - 2018',
+        marks: '90.4 %',
+        // description:
+        //   'Describe your experience at school, what you learned, what useful skills you have acquired etc.',
+      },
+      {
+        school: 'Nav Jeevan Adarsh Public School',
+        degree: 'Secondary School',
+        graduated: 'April 2016',
+        marks: '8.6 CGPA',
+        // description:
+        //   'Describe your experience at school, what you learned, what useful skills you have acquired etc.',
       },
     ],
     work: [
       {
-        company: 'Awesome Design Studio',
-        title: 'Senior UX God ',
-        years: 'March 2018 - Present',
-        description:
-          'Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know.',
+        company: 'Solera Life Science',
+        title: 'Full stack MERN Developer ',
+        years: 'January 2021- Present',
+        description: `I worked as a Full stack technical intern on a various products
+          and the signature product DocPlus working on creating
+          platform to connect doctors and patients
+           Worked on latest technologies like Html, CSS, Js, ReactJs,
+          NextJs, MongoDB & Nodejs.`,
       },
       {
-        company: 'Super Cool Studio',
-        title: 'Junior bug fixer',
-        years: 'March 2017 - February 2018',
-        description:
-          'Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know.',
+        company: 'ITMTB',
+        title: 'Full stack technical intern',
+        years: 'October 2020 – December 2020',
+        description: `I worked as a Full stack technical intern on a fintech product
+        named Prospareto. My primary work involved API integration,
+        designing and adding functionalities to the components and
+        creating and managing APIs using Flask.
+        Tech stack: ReactJS, Flask, MySQL`,
       },
     ],
     skills: [
       {
-        name: 'Python',
-        level: '60%',
-      },
-      {
-        name: 'VueJs',
-        level: '55%',
-      },
-      {
         name: 'ReactJs',
-        level: '50%',
+        level: '80%',
+      },
+      {
+        name: 'NodeJS/Express',
+        level: '75%',
+      },
+      {
+        name: 'Angular',
+        level: '65%',
+      },
+      {
+        name: 'HTML',
+        level: '90%',
+      },
+      {
+        name: 'Javascript',
+        level: '75%',
       },
       {
         name: 'CSS',
         level: '90%',
       },
       {
-        name: 'PHP',
-        level: '80%',
+        name: 'Flutter',
+        level: '70%',
       },
       {
-        name: 'Swift',
+        name: 'Flask',
+        level: '40%',
+      },
+      {
+        name: 'MongoDb',
+        level: '70%',
+      },
+      {
+        name: 'MySql',
         level: '50%',
-      },
-      {
-        name: 'JAVA',
-        level: '80%',
       },
     ],
   },

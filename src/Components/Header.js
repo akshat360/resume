@@ -10,6 +10,7 @@ class Header extends Component {
     const github = this.props.data.github;
     const name = this.props.data.name;
     const description = this.props.data.description;
+    const headerLinks = this.props.data.headerLinks;
 
     return (
       <header id="home">
@@ -67,12 +68,16 @@ class Header extends Component {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={project} className="button btn linkedin-btn">
-                  <i className="fa fa-linkedin"></i>LinkedIn
-                </a>
-                <a href={github} className="button btn github-btn">
-                  <i className="fa fa-github"></i>Github
-                </a>
+                {headerLinks.map((item) => (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={item.className + ' header-links '}
+                  >
+                    <i className={item.icon}></i>
+                  </a>
+                ))}
               </ul>
             </Fade>
           </div>
