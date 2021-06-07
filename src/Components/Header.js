@@ -6,11 +6,7 @@ class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
-    const github = this.props.data.github;
-    const name = this.props.data.name;
-    const description = this.props.data.description;
-    const headerLinks = this.props.data.headerLinks;
+    const { name, description, social } = this.props.data;
 
     return (
       <header id="home">
@@ -49,11 +45,11 @@ class Header extends Component {
               </a>
             </li>
 
-            <li>
+            {/* <li>
               <a className="smoothscroll" href="#contact">
                 Contact
               </a>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
@@ -68,7 +64,7 @@ class Header extends Component {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                {headerLinks.map((item) => (
+                {social.map((item) => (
                   <a
                     href={item.url}
                     target="_blank"

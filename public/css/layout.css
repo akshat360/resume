@@ -92,7 +92,10 @@ header .social .header-links {
   margin: 0px 10px;
 }
 header .social .header-links i {
-  font-size: 30px;
+  font-size: 40px;
+  color: white;
+}
+header .social .header-links i:hover {
   color: #323232;
 }
 header .social li {
@@ -341,6 +344,7 @@ ul#nav li.current a {
   width: 33%;
   padding: 0.5rem 2rem;
   text-align: center;
+  align-self: center;
 }
 
 .bars em {
@@ -488,7 +492,6 @@ ul#nav li.current a {
   background: #fff;
   overflow: hidden;
   position: relative;
-
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -496,18 +499,26 @@ ul#nav li.current a {
   transition: all 0.3s ease-in-out;
 }
 .portfolio-item .item-wrap a {
+  color: #aaa;
   display: block;
   cursor: pointer;
 }
 
 /* overlay */
+.portfolio-item .item-wrap .overlay .under {
+  padding: 0.2rem 2rem;
+  background-color: #00814d;
+  width: fit-content;
+  color: white;
+  font-size: 12px;
+}
 .portfolio-item .item-wrap .overlay {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-
+  padding: 10px;
   opacity: 0;
   -moz-opacity: 0;
   filter: alpha(opacity=0);
@@ -543,8 +554,17 @@ ul#nav li.current a {
   margin-left: -15px;
   margin-top: -15px;
 }
+
 .portfolio-item .item-wrap img {
-  vertical-align: bottom;
+  /* vertical-align: bottom; */
+  width: 100%;
+  height: 100%;
+}
+.portfolio-item .item-wrap div.title {
+  /* vertical-align: bottom; */
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .portfolio-item .portfolio-item-meta {
   padding: 18px;
@@ -1044,7 +1064,7 @@ call-to-action .button {
 footer {
   padding-top: 48px;
   margin-bottom: 48px;
-  color: #303030;
+  color: #999;
   font-size: 14px;
   text-align: center;
   position: relative;
@@ -1077,7 +1097,7 @@ footer .copyright li:before {
   content: '\2022';
   padding-left: 10px;
   padding-right: 10px;
-  color: #095153;
+  color: #525252;
 }
 footer .copyright li:first-child:before {
   display: none;
@@ -1154,4 +1174,13 @@ footer .social-links li:first-child {
 .button:hover {
   transition: transform 0.2s;
   transform: scale(1.1);
+}
+
+.technologies-wrapper {
+  display: block;
+  position: absolute;
+}
+.technologies-images {
+  display: flex;
+  flex-wrap: wrap;
 }
