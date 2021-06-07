@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import Fade from "react-reveal";
+import React, { Component } from 'react';
+import Fade from 'react-reveal';
 
 class About extends Component {
   render() {
     if (!this.props.data) return null;
 
     const name = this.props.data.name;
-    const profilepic = "images/" + this.props.data.image;
+    const profilepic = 'images/' + this.props.data.image;
     const bio = this.props.data.bio;
     const street = this.props.data.address.street;
     const city = this.props.data.address.city;
@@ -38,8 +38,6 @@ class About extends Component {
                     <span>{name}</span>
                     <br />
                     <span>
-                      {street}
-                      <br />
                       {city} {state}, {zip}
                     </span>
                     <br />

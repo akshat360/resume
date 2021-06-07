@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import ParticlesBg from "particles-bg";
-import Fade from "react-reveal";
+import React, { Component } from 'react';
+import ParticlesBg from 'particles-bg';
+import Fade from 'react-reveal';
 
 class Header extends Component {
   render() {
@@ -67,8 +67,8 @@ class Header extends Component {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
+                <a href={project} className="button btn linkedin-btn">
+                  <i className="fa fa-linkedin"></i>LinkedIn
                 </a>
                 <a href={github} className="button btn github-btn">
                   <i className="fa fa-github"></i>Github

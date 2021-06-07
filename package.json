@@ -1,8 +1,12 @@
 {
-  "name": "reactniceresume",
+  "name": "akshat-aggarwal-resume",
   "version": "0.1.0",
   "private": true,
   "homepage": "./",
+  "engines": {
+    "npm": "7.11.2",
+    "node": "12.15.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
