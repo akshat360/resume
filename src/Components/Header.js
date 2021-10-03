@@ -8,7 +8,8 @@ class Header extends Component {
 	render() {
 		if (!this.props.data) return null;
 
-		const { name, description, social } = this.props.data;
+		const { name, description, social, logo } = this.props.data;
+		const Logo = 'images/' + logo;
 
 		return (
 			<header id='home'>
@@ -21,8 +22,12 @@ class Header extends Component {
 					<a className='mobile-btn' href='#home' title='Hide navigation'>
 						Hide navigation
 					</a>
-
 					<ul id='nav' className='nav'>
+						{/* <li className='current'>
+							<a className='smoothscroll' href='#home'>
+								<img width='140px' height='40px' src={Logo} alt='Logog' />
+							</a>
+						</li> */}
 						<li className='current'>
 							<a className='smoothscroll' href='#home'>
 								Home

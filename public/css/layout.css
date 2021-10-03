@@ -120,7 +120,7 @@ header .banner-text h2 {
 	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
 }
 header .banner-text h2 span::before {
-	content: '';
+	content: 'Software Developer';
 	animation: text-change infinite 6s;
 }
 
@@ -535,6 +535,37 @@ ul#nav li.current a {
 	border-radius: 25px;
 	height: 20px;
 	display: flex;
+}
+.bar-expand .bar-expand--animate {
+	border-radius: 25px;
+	animation: expand 1s ease-out;
+	width: 100%;
+}
+
+.c-work-row {
+	/* animation: expand 1s ease-out; */
+}
+.c-work-row .c-work-row__head {
+	display: flex;
+	gap: 2rem;
+}
+.c-work-row .c-work-row__head img {
+	border-radius: 12px;
+}
+/* .c-work-row .c-work-row__head d {
+	display: flex;
+} */
+.c-work-row h3 {
+	cursor: pointer;
+}
+
+@keyframes expand {
+	0% {
+		width: 0px;
+	}
+	100% {
+		width: 100%;
+	}
 }
 
 /*

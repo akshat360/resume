@@ -3,6 +3,7 @@
 const data = {
 	main: {
 		name: 'Akshat Aggarwal',
+		logo: 'akshat_logo.png',
 		description: 'Skill Coder | MERN Developer | Web Developer | Curious Mind',
 		iama: [
 			'Problem Solver',
@@ -81,7 +82,9 @@ const data = {
 		work: [
 			{
 				company: 'CredFlow',
+				logo: 'images/work/credflow.jpeg',
 				title: 'SDE1 ',
+				weblink: 'https://credflow.in/',
 				years: 'October 2021- Present',
 				description: `• Credflow: Automated collection engine for Tally Users.\n
 				• Refactoring Frontend Codebase.
@@ -90,7 +93,9 @@ const data = {
 			},
 			{
 				company: 'Solera Life Science',
+				logo: 'images/work/docplus.png',
 				title: 'SDE Intern ',
+				weblink: 'https://docplus.online/',
 				years: 'January 2021- June 2021',
 				description: `• DocPlus: A platform to connect to professional Doctors & can book online or offline appointments.\n
 				• Handling Authentication, UI for the user.
@@ -101,7 +106,9 @@ const data = {
 			},
 			{
 				company: 'ITMTB',
+				logo: 'images/work/prospareto.png',
 				title: 'Full stack Intern',
+				weblink: 'https://prospareto.com/',
 				years: 'October 2020 – December 2020',
 				description: `• Prospareto: A stock recommender & community brand.
 				• Developed the customer-side UI of the website.

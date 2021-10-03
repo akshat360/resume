@@ -112,7 +112,11 @@ class About extends Component {
 							<div className='c-profiles'>
 								<h2>Profiles</h2>
 								{profiles.map(_p => (
-									<a href={_p.link} className='c-profiles__profile'>
+									<a
+										href={_p.link}
+										target='blank'
+										rel='noreferrer'
+										className='c-profiles__profile'>
 										<FontAwesomeIcon icon={_p.icon} />
 										&nbsp;&nbsp;
 										{_p.name}

@@ -8,7 +8,7 @@ export default function Summary() {
 		<div className='c-summary '>
 			<div className='row'>
 				<div className='four columns'>
-					<RingContainer number='1000Hr+' headline='Coding' />
+					<RingContainer number='3000Hr+' headline='Coding' />
 				</div>
 				<div className='four columns'>
 					<RingContainer number='10+' headline='Projects' />

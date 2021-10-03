@@ -37,12 +37,22 @@ class Resume extends Component {
 		const work = this.props.data.work.map(function (work) {
 			return (
 				<Slide cascade left duration={1300}>
-					<div key={work.company}>
-						<h3>{work.company}</h3>
-						<p className='info'>
-							{work.title}
-							<span>&bull;</span> <em className='date'>{work.years}</em>
-						</p>
+					<div className='c-work-row' key={work.company}>
+						<div className='c-work-row__head'>
+							<div>
+								<img width='60px' height='60px' src={work.logo} alt='Logog' />
+							</div>
+							<div>
+								<a href={work.weblink} target='_blank' rel='noreferrer'>
+									<h3>{work.company}</h3>
+								</a>
+								<p className='info'>
+									{work.title}
+									<span>&bull;</span> <em className='date'>{work.years}</em>
+								</p>
+							</div>
+						</div>
+
 						<p>{work.description}</p>
 					</div>
 				</Slide>
@@ -95,11 +105,13 @@ class Resume extends Component {
 									<div key={skills.name} className='skill'>
 										<em>{skills.name}</em>
 										<div className='bar-expand-wrapper'>
-											<Slide cascade left>
+											{/* <Slide cascade left> */}
+											<div className='bar-expand' style={{ width }}>
 												<div
-													className='bar-expand'
-													style={{ width, backgroundColor }}></div>
-											</Slide>
+													className='bar-expand--animate'
+													style={{ backgroundColor }}></div>
+											</div>
+											{/* </Slide> */}
 										</div>
 									</div>
 								);
