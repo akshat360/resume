@@ -248,7 +248,7 @@
 	/* About Section
    -------------------------------------------------------------------- */
 	#about .profile-pic {
-		display: none;
+		/* display: none; */
 	}
 	#about .download .button {
 		width: 100%;
@@ -429,6 +429,16 @@
 	#nav-wrap ul#nav {
 		width: auto;
 		float: none;
+	}
+	#about {
+		padding-top: 36px;
+	}
+	#about .three.columns {
+		text-align: center;
+	}
+	#about .profile-pic {
+		width: 114px;
+		height: 114px;
 	}
 
 	/* header styles

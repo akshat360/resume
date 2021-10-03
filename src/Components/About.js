@@ -59,15 +59,10 @@ class About extends Component {
 				<Fade duration={1000}>
 					<div className='row'>
 						<div className='three columns'>
-							<img
-								className='profile-pic'
-								src={profilepic}
-								alt='Nordic Giant Profile Pic'
-							/>
+							<img className='profile-pic' src={profilepic} alt='Profile Pic' />
 						</div>
 						<div className='nine columns main-col'>
 							<h2>About Me</h2>
-
 							<p>{bio}</p>
 							<div className='row'>
 								<div className='columns contact-details'>
@@ -108,7 +103,7 @@ class About extends Component {
 											target='_blank'
 											rel='noreferrer'
 											className='button'>
-											<i className='fa fa-download'></i>Download Resume
+											<i className='fa fa-download'></i>View Resume
 										</a>
 									</p>
 								</div>

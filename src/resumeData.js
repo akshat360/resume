@@ -4,8 +4,15 @@ const data = {
 	main: {
 		name: 'Akshat Aggarwal',
 		description: 'Skill Coder | MERN Developer | Web Developer | Curious Mind',
+		iama: [
+			'Problem Solver',
+			'Software Developer',
+			'Web Developer',
+			'App Developer',
+			'UI Enthusiast',
+		],
 		image: 'profilepic.png',
-		bio: "I will be completing my graduation this year in bachelor's of Technology (B.Tech) in IT from Maharaja surajmal Insitute of Technology  and I have been working as Full-stack MERN developer from past one year. I have hands-on experience on the technologies like ReactJs, NextJs, NodeJs, Express, Flask, Flutter & Angular.",
+		bio: "I'm a Software Developer at CredFlow in Delhi, India. I have passion for Software Development, UI effects, animations and creating intuitive, dynamic user experiences. I have hands-on experience on the technologies like ReactJs, NextJs, NodeJs, Express, Flask, Flutter & Angular(2+).",
 		contactmessage:
 			'Here is where you should write your message to readers to have them get in contact with you.',
 		email: 'akshataggarwal360@gmail.com',
