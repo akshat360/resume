@@ -1,118 +1,125 @@
-jQuery(document).ready(function($) {
-  var time = 380;
-  setTimeout(function() {
-    $("h1.responsive-headline").fitText(1, { minFontSize: "40px", maxFontSize: "90px" });
+/** @format */
 
-    $(".smoothscroll").on("click", function(e) {
-      e.preventDefault();
-      var target = this.hash,
-        $target = $(target);
+jQuery(document).ready(function ($) {
+	var time = 380;
+	setTimeout(function () {
+		$('h1.responsive-headline').fitText(1, {
+			minFontSize: '35px',
+			maxFontSize: '50px',
+		});
 
-      $("html, body")
-        .stop()
-        .animate(
-          {
-            scrollTop: $target.offset().top
-          },
-          800,
-          "swing",
-          function() {
-            window.location.hash = target;
-          }
-        );
-    });
+		$('.smoothscroll').on('click', function (e) {
+			e.preventDefault();
+			var target = this.hash,
+				$target = $(target);
 
-    var sections = $("section");
-    var navigation_links = $("#nav-wrap a");
+			$('html, body')
+				.stop()
+				.animate(
+					{
+						scrollTop: $target.offset().top,
+					},
+					800,
+					'swing',
+					function () {
+						window.location.hash = target;
+					}
+				);
+		});
 
-    sections.waypoint({
-      handler: function(event, direction) {
-        var active_section;
+		var sections = $('section');
+		var navigation_links = $('#nav-wrap a');
 
-        active_section = $(this);
-        if (direction === "up") active_section = active_section.prev();
+		sections.waypoint({
+			handler: function (event, direction) {
+				var active_section;
 
-        var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
+				active_section = $(this);
+				if (direction === 'up') active_section = active_section.prev();
 
-        navigation_links.parent().removeClass("current");
-        active_link.parent().addClass("current");
-      },
-      offset: "35%"
-    });
+				var active_link = $(
+					'#nav-wrap a[href="#' + active_section.attr('id') + '"]'
+				);
 
-    $("header").css({ height: $(window).height() });
-    $(window).on("resize", function() {
-      $("header").css({ height: $(window).height() });
-      $("body").css({ width: $(window).width() });
-    });
+				navigation_links.parent().removeClass('current');
+				active_link.parent().addClass('current');
+			},
+			offset: '35%',
+		});
 
-    $(window).on("scroll", function() {
-      var h = $("header").height();
-      var y = $(window).scrollTop();
-      var nav = $("#nav-wrap");
+		$('header').css({ height: $(window).height() });
+		$(window).on('resize', function () {
+			$('header').css({ height: $(window).height() });
+			$('body').css({ width: $(window).width() });
+		});
 
-      if (y > h * 0.2 && y < h && $(window).outerWidth() > 768) {
-        nav.fadeOut("fast");
-      } else {
-        if (y < h * 0.2) {
-          nav.removeClass("opaque").fadeIn("fast");
-        } else {
-          nav.addClass("opaque").fadeIn("fast");
-        }
-      }
-    });
+		$(window).on('scroll', function () {
+			var h = $('header').height();
+			var y = $(window).scrollTop();
+			var nav = $('#nav-wrap');
 
-    $(".flexslider").flexslider({
-      namespace: "flex-",
-      controlsContainer: ".flex-container",
-      animation: "slide",
-      controlNav: true,
-      directionNav: false,
-      smoothHeight: true,
-      slideshowSpeed: 7000,
-      animationSpeed: 600,
-      randomize: false
-    });
+			if (y > h * 0.2 && y < h && $(window).outerWidth() > 768) {
+				nav.fadeOut('fast');
+			} else {
+				if (y < h * 0.2) {
+					nav.removeClass('opaque').fadeIn('fast');
+				} else {
+					nav.addClass('opaque').fadeIn('fast');
+				}
+			}
+		});
 
-    $("form#contactForm button.submit").click(function() {
-      $("#image-loader").fadeIn();
+		$('.flexslider').flexslider({
+			namespace: 'flex-',
+			controlsContainer: '.flex-container',
+			animation: 'slide',
+			controlNav: true,
+			directionNav: false,
+			smoothHeight: true,
+			slideshowSpeed: 7000,
+			animationSpeed: 600,
+			randomize: false,
+		});
 
-      var contactName = $("#contactForm #contactName").val();
-      var contactEmail = $("#contactForm #contactEmail").val();
-      var contactSubject = $("#contactForm #contactSubject").val();
-      var contactMessage = $("#contactForm #contactMessage").val();
+		$('form#contactForm button.submit').click(function () {
+			$('#image-loader').fadeIn();
 
-      var data =
-        "contactName=" +
-        contactName +
-        "&contactEmail=" +
-        contactEmail +
-        "&contactSubject=" +
-        contactSubject +
-        "&contactMessage=" +
-        contactMessage;
+			var contactName = $('#contactForm #contactName').val();
+			var contactEmail = $('#contactForm #contactEmail').val();
+			var contactSubject = $('#contactForm #contactSubject').val();
+			var contactMessage = $('#contactForm #contactMessage').val();
 
-      $.ajax({
-        type: "POST",
-        url: "inc/sendEmail.php",
-        data: data,
-        success: function(msg) {
-          // Message was sent
-          if (msg == "OK") {
-            $("#image-loader").fadeOut();
-            $("#message-warning").hide();
-            $("#contactForm").fadeOut();
-            $("#message-success").fadeIn();
-          }
-          // There was an error
-          else {
-            $("#image-loader").fadeOut();
-            $("#message-warning").html(msg);
-            $("#message-warning").fadeIn();
-          }
-        }
-      });
-      return false;
-    });
-  }, time);
+			var data =
+				'contactName=' +
+				contactName +
+				'&contactEmail=' +
+				contactEmail +
+				'&contactSubject=' +
+				contactSubject +
+				'&contactMessage=' +
+				contactMessage;
+
+			$.ajax({
+				type: 'POST',
+				url: 'inc/sendEmail.php',
+				data: data,
+				success: function (msg) {
+					// Message was sent
+					if (msg == 'OK') {
+						$('#image-loader').fadeOut();
+						$('#message-warning').hide();
+						$('#contactForm').fadeOut();
+						$('#message-success').fadeIn();
+					}
+					// There was an error
+					else {
+						$('#image-loader').fadeOut();
+						$('#message-warning').html(msg);
+						$('#message-warning').fadeIn();
+					}
+				},
+			});
+			return false;
+		});
+	}, time);
 });
